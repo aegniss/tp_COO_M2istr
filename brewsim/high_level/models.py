@@ -55,8 +55,7 @@ class QuantiteIngredient(models.Model):
 
     def costs(self, departement):
         cost_qi = (
-            self.ingredient.prix_set.get(departement__numero=Usine.departement.numero).prix
-            * self.quantite
+            (self.ingredient.prix_set.get(departement__numero=Usine.departement.numero).prix) * self.quantite
         )
         return cost_qi
 
@@ -105,14 +104,13 @@ class Recette(models.Model):
 
     def __str__(self):
         return f" Recette : {self.nom}"
-    self.ingredient.prix_set.get(departement__numero=Usine.departement).prix
 
     action = models.ForeignKey(
         Action,
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )
+    )#
 
 
 class Usine(models.Model):
@@ -121,7 +119,7 @@ class Usine(models.Model):
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )
+    )#
 
     def __str__(self):
         return f"Usine du {self.departement.numero}"
