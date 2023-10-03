@@ -53,7 +53,10 @@ class QuantiteIngredient(models.Model):
     quantite = models.IntegerField()
 
     def costs(self, departement):
-        cost_qi = (self.ingredient.prix_set.get(departement__numero=departement).prix) * self.quantite
+        print(departement, self.ingredient)
+        cost_qi = (
+            self.ingredient.prix_set.get(departement__numero=departement).prix
+        ) * self.quantite
         return cost_qi
 
 
@@ -141,4 +144,5 @@ class Usine(models.Model):
             S += si.costs(self.departement.numero)
 
         cost_U = (self.departement.prix_m2 * self.taille) + T + S
+        print cost_U
         return cost_U
