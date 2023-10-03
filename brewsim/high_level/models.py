@@ -7,14 +7,14 @@ class Departement(models.Model):
     prix_m2 = models.IntegerField()
 
     def __str__(self):
-        return self.Departement
+        return f" prix de m2 dans le {self.numero} = {self.prix_m2}"
 
 
 class Ingredient(models.Model):
     nom = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.nom
+        return f" ingredient : {self.nom}"
 
 
 class Prix(models.Model):
@@ -35,7 +35,8 @@ class Prix(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return self.prix
+        return (f" prix ingredient {self.ingredient}"
+         f" dans le {self.departement} = {self.prix} ")
 
 
 class QuantiteIngredient(models.Model):
@@ -48,7 +49,7 @@ class QuantiteIngredient(models.Model):
     )
 
     def __str__(self):
-        return self.ingredient
+        return f" quantite {self.ingredient} est : {self.quantite}"
 
     quantite = models.IntegerField()
 
@@ -59,7 +60,7 @@ class Machine(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return self.nom
+        return f"machine {self.nom} coute {self.prix}"
 
 
 class Action(models.Model):
@@ -85,14 +86,15 @@ class Action(models.Model):
     )
 
     def __str__(self):
-        return f"Action sur la machine {self.machine} avec la commande {self.commande}"
+        return (f"Action machine {self.machine} avec commande {self.commande}"
+         f"dure {self.duree} necessite {self.ingredient}")
 
 
 class Recette(models.Model):
     nom = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.nom
+        return f" Recette : {self.nom}"
 
     action = models.ForeignKey(
         Action,
