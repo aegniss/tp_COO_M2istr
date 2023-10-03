@@ -7,7 +7,7 @@ class Departement(models.Model):
     prix_m2 = models.IntegerField()
 
     def __str__(self):
-        return f" prix de m2 dans le {self.numero} = {self.prix_m2}"
+        return f"{self.numero}"
 
 
 class Ingredient(models.Model):
@@ -35,8 +35,10 @@ class Prix(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return (f" prix ingredient {self.ingredient}"
-         f" dans le {self.departement} = {self.prix} ")
+        return (
+            f" prix ingredient {self.ingredient}"
+            f" dans le {self.departement} = {self.prix} "
+        )
 
 
 class QuantiteIngredient(models.Model):
@@ -60,7 +62,7 @@ class Machine(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return f"machine {self.nom} coute {self.prix}"
+        return f"machine {self.nom}"  #coute {self.prix}
 
 
 class Action(models.Model):
@@ -86,8 +88,10 @@ class Action(models.Model):
     )
 
     def __str__(self):
-        return (f"Action machine {self.machine} avec commande {self.commande}"
-         f"dure {self.duree} necessite {self.ingredient}")
+        return (
+            f"Action machine {self.machine} avec commande {self.commande}"
+            f"dure {self.duree} necessite {self.ingredient}"
+        )
 
 
 class Recette(models.Model):
