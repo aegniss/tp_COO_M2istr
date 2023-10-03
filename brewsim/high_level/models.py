@@ -35,8 +35,7 @@ class Prix(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return (f" prix {self.ingredient}"
-        f" dans le {self.departement} = {self.prix} ")
+        return f" prix {self.ingredient}" f" dans le {self.departement} = {self.prix} "
 
 
 class QuantiteIngredient(models.Model):
@@ -54,8 +53,9 @@ class QuantiteIngredient(models.Model):
     quantite = models.IntegerField()
 
     def costs(self, departement):
-        cost_qi = (self.ingredient.prix_set.get(departement__numero
-        =Usine.departement).prix * self.quantite
+        cost_qi = (
+            self.ingredient.prix_set.get(departement__numero=Usine.departement).prix
+            * self.quantite
         )
         return cost_qi
 
