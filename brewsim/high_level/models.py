@@ -35,8 +35,7 @@ class Prix(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return f" prix {self.ingredient}"
-        f" dans le {self.departement} = {self.prix} "
+        return f" prix {self.ingredient} dep {self.departement} = {self.prix} "
 
 
 class QuantiteIngredient(models.Model):
@@ -53,11 +52,9 @@ class QuantiteIngredient(models.Model):
 
     quantite = models.IntegerField()
 
-    def costs(self, departement, Us):
+    def costs(self, departement):
         cost_qi = (
-            self.ingredient.prix_set.get(
-                departement__numero=Us.departement.numero
-            ).prix
+            self.ingredient.prix_set.get(departement__numero=departement).prix
         ) * self.quantite
         return cost_qi
 
@@ -106,13 +103,12 @@ class Recette(models.Model):
 
     def __str__(self):
         return f" Recette : {self.nom}"
-
     action = models.ForeignKey(
         Action,
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )  #
+    )
 
 
 class Usine(models.Model):
@@ -121,7 +117,7 @@ class Usine(models.Model):
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )  #
+    )
 
     def __str__(self):
         return f"Usine du {self.departement.numero}"
@@ -143,7 +139,7 @@ class Usine(models.Model):
         self.stocks.all()
         S = 0
         for si in self.stocks.all():
-            S += si.costs(self.departement.numero, self)
+            S += si.costs(self.departement.numero)
 
         cost_U = (self.departement.prix_m2 * self.taille) + T + S
         return cost_U
