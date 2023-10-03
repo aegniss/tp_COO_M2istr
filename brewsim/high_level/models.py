@@ -53,10 +53,9 @@ class QuantiteIngredient(models.Model):
 
     quantite = models.IntegerField()
 
-    def costs(self, departement):
+    def costs(self, departement, Usine):
         cost_qi = (
-            (self.ingredient.prix_set.get(departement__numero=Usine.departement.numero).prix) * self.quantite
-        )
+            self.ingredient.prix_set.get(departement__numero=Usine.departement.numero).prix) * self.quantite
         return cost_qi
 
 
@@ -110,7 +109,7 @@ class Recette(models.Model):
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )#
+    )  #
 
 
 class Usine(models.Model):
@@ -119,7 +118,7 @@ class Usine(models.Model):
         on_delete=models.PROTECT,
         # blank=True, null=True,
         # related_name="+",
-    )#
+    )  #
 
     def __str__(self):
         return f"Usine du {self.departement.numero}"
@@ -141,7 +140,7 @@ class Usine(models.Model):
         self.stocks.all()
         S = 0
         for si in self.stocks.all():
-            S += si.costs(self.departement.numero)
+            S += si.costs(self.departement.numero, self)
 
         cost_U = (self.departement.prix_m2 * self.taille) + T + S
         return cost_U
