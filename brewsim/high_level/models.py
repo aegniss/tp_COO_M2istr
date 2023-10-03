@@ -35,7 +35,8 @@ class Prix(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return f" prix {self.ingredient}" f" dans le {self.departement} = {self.prix} "
+        return f" prix {self.ingredient}"
+        f" dans le {self.departement} = {self.prix} "
 
 
 class QuantiteIngredient(models.Model):
@@ -125,7 +126,7 @@ class Usine(models.Model):
         return f"Usine du {self.departement}"
 
     taille = models.IntegerField()
-
+from .models import Machine, Usine
     machines = models.ManyToManyField(Machine)
 
     recettes = models.ManyToManyField(Recette)
@@ -141,7 +142,7 @@ class Usine(models.Model):
         self.stocks.all()
         S = 0
         for si in self.stocks.all():
-            S += si.cost_qi
+            S += si.costs(self.departement.numero)
 
         cost_U = (self.departement.prix_m2 * self.taille) + T + S
         return cost_U

@@ -1,7 +1,6 @@
 from django.test import TestCase
 
-from .models import Machine
-from .models import Usine
+from .models import Machine, Usine
 
 
 class MachineModelTests(TestCase):
