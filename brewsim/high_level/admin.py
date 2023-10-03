@@ -1,10 +1,8 @@
-from django.contrib import admin
-
-# Register your models here.
-
 # mysite/admin.py
 from django.contrib import admin
 from high_level import models
+
+# Register your models here.
 
 
 admin.site.register(models.Usine)
