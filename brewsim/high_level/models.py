@@ -53,9 +53,12 @@ class QuantiteIngredient(models.Model):
 
     quantite = models.IntegerField()
 
-    def costs(self, departement, Usine):
+    def costs(self, departement, Us):
         cost_qi = (
-            self.ingredient.prix_set.get(departement__numero=Usine.departement.numero).prix) * self.quantite
+            self.ingredient.prix_set.get(
+                departement__numero=Us.departement.numero
+            ).prix
+        ) * self.quantite
         return cost_qi
 
 
