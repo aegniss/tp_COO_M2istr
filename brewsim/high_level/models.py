@@ -36,7 +36,7 @@ class Prix(models.Model):
 
     def __str__(self):
         return (
-            f" prix ingredient {self.ingredient}"
+            f" prix {self.ingredient}"
             f" dans le {self.departement} = {self.prix} "
         )
 
@@ -62,7 +62,8 @@ class Machine(models.Model):
     prix = models.IntegerField()
 
     def __str__(self):
-        return f"machine {self.nom}"  #coute {self.prix}
+        return f"machine {self.nom}"  # coute {self.prix}
+
 
 
 class Action(models.Model):
@@ -88,10 +89,9 @@ class Action(models.Model):
     )
 
     def __str__(self):
-        return (
-            f"Action machine {self.machine} avec commande {self.commande}"
-            f"dure {self.duree} necessite {self.ingredient}"
-        )
+        return f"Action machine {self.machine} avec commande {self.commande}"
+
+
 
 
 class Recette(models.Model):
