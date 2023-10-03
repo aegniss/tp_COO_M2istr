@@ -127,6 +127,7 @@ class Usine(models.Model):
 
     taille = models.IntegerField()
 from .models import Machine, Usine
+
     machines = models.ManyToManyField(Machine)
 
     recettes = models.ManyToManyField(Recette)
