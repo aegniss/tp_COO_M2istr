@@ -2,7 +2,6 @@ from json import dumps
 
 from django.http import HttpResponse
 from django.views.generic.detail import DetailView
-#from rest_framework.views import APIView
 
 from .models import (
     Action,
@@ -14,6 +13,8 @@ from .models import (
     Recette,
     Usine,
 )
+
+# from rest_framework.views import APIView
 
 
 class DepartementDetailView(DetailView):
@@ -37,14 +38,11 @@ class IngredientDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-
-
 class ActionDetailView(DetailView):
     model = Action
 
     def render_to_response(self, context, **response_kwargs):
         return HttpResponse(dumps(self.object.json()))
-
 
 
 class PrixDetailView(DetailView):
@@ -54,14 +52,11 @@ class PrixDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-
-
 class MachineDetailView(DetailView):
     model = Machine
 
     def render_to_response(self, context, **response_kwargs):
         return HttpResponse(dumps(self.object.json()))
-
 
 
 class RecetteDetailView(DetailView):
@@ -71,14 +66,11 @@ class RecetteDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-
 class UsineDetailView(DetailView):
     model = Usine
 
     def render_to_response(self, context, **response_kwargs):
         return HttpResponse(dumps(self.object.json()))
-
-
 
 
 class QuantiteIngredientDetailView(DetailView):

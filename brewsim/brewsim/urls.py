@@ -65,5 +65,4 @@ urlpatterns = [
         views.DepartementDetailAPIView.as_view(),
         name="Departement_api",
     ),
-
 ]
