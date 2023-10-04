@@ -9,12 +9,18 @@ class Departement(models.Model):
     def __str__(self):
         return f"{self.numero}"
 
+    def __json__(self):
+        return {"numero": self.numero, "prix_m2 ": self.prix_m2}
+
 
 class Ingredient(models.Model):
     nom = models.CharField(max_length=100)
 
     def __str__(self):
         return f" ingredient : {self.nom}"
+
+    def __json__(self):
+        return {"ingredient": self.nom}
 
 
 class Prix(models.Model):
@@ -37,6 +43,9 @@ class Prix(models.Model):
     def __str__(self):
         return f" prix {self.ingredient} dep {self.departement} = {self.prix} "
 
+    def __json__(self):
+        return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
+
 
 class QuantiteIngredient(models.Model):
     ingredient = models.ForeignKey(
@@ -50,10 +59,12 @@ class QuantiteIngredient(models.Model):
     def __str__(self):
         return f" quantite {self.ingredient} est : {self.quantite}"
 
+    def __json__(self):
+        return {" ingredient ": self.ingredient, "quantite ": self.quantite}
+
     quantite = models.IntegerField()
 
     def costs(self, departement):
-        print(departement, self.ingredient)
         cost_qi = (
             self.ingredient.prix_set.get(departement__numero=departement).prix
         ) * self.quantite
@@ -67,6 +78,9 @@ class Machine(models.Model):
 
     def __str__(self):
         return f"machine {self.nom}"  # coute {self.prix}
+
+    def __json__(self):
+        return {"machine": self.nom, "prix": self.prix}  # coute {self.prix}
 
     def costs(self):
         cost_M = self.prix
@@ -98,12 +112,23 @@ class Action(models.Model):
     def __str__(self):
         return f"Action {self.machine} avec commande {self.commande}"
 
+    def __json__(self):
+        return {
+            "Action": self.machine,
+            "avec commande": self.commande,
+            "duree": self.duree,
+            "ingredient": self.ingredients,
+        }
+
 
 class Recette(models.Model):
     nom = models.CharField(max_length=100)
 
     def __str__(self):
         return f" Recette : {self.nom}"
+
+    def __json__(self):
+        return {"Recette": self.nom}
 
     action = models.ForeignKey(
         Action,
@@ -123,6 +148,13 @@ class Usine(models.Model):
 
     def __str__(self):
         return f"Usine du {self.departement.numero}"
+
+    def __json__(self):
+        return {
+            "departement": self.departement.numero,
+            "taille": self.taille,
+            "machines": self.machines,
+        }
 
     taille = models.IntegerField()
 
@@ -144,5 +176,5 @@ class Usine(models.Model):
             S += si.costs(self.departement.numero)
 
         cost_U = (self.departement.prix_m2 * self.taille) + T + S
-        print cost_U
+        print(cost_U)
         return cost_U
