@@ -1,8 +1,8 @@
 from json import dumps
 
 from django.http import HttpResponse
-from django.views.generic import DetailView
-from django.views.generic import APIView
+f#rom django.views.generic import APIView, DetailView
+from rest_framework.views import APIView, DetailView
 
 from .models import (
     Action,
