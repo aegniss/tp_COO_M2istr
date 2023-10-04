@@ -16,12 +16,14 @@ class Departement(models.Model):
         return {
             "numero": self.numero,
             "prix_m2 ": self.prix_m2,
-            "Usine": {self.usine_set.get()},
-            "prix": [p.json_extended() for p in self.prix_set.all()
-                #{
+            "Usine": {self.usine_set.get().json_extended},
+            "prix": [
+                p.json_extended()
+                for p in self.prix_set.all()
+                # {
                 #    "ingredient": self.ingredient_set.all(),
                 #    "prix": Ingredient.prix_set.all(),
-                #}
+                # }
             ],
         }
 
@@ -63,7 +65,7 @@ class Prix(models.Model):
         return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
     def json_extended(self):
-        return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
+        return {"ingredient ": self.ingredient.json_extended, "dep": self.departement, "prix": self.prix}
 
 
 class QuantiteIngredient(models.Model):
@@ -180,7 +182,7 @@ class Recette(models.Model):
     action = models.ForeignKey(
         Action,
         on_delete=models.PROTECT,
-        # blank=True, null=True,
+        # blank=True, null=True,serializable
         # related_name="+",
     )
 
