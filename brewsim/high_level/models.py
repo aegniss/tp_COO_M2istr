@@ -12,6 +12,9 @@ class Departement(models.Model):
     def json(self):
         return {"numero": self.numero, "prix_m2 ": self.prix_m2}
 
+    def json_extended(self):
+        return {"numero": self.numero, "prix_m2 ": self.prix_m2}
+
 
 class Ingredient(models.Model):
     nom = models.CharField(max_length=100)
@@ -22,6 +25,8 @@ class Ingredient(models.Model):
     def json(self):
         return {"ingredient": self.nom}
 
+    def json_extended(self):
+        return {"ingredient": self.nom}
 
 class Prix(models.Model):
     ingredient = models.ForeignKey(
@@ -46,13 +51,15 @@ class Prix(models.Model):
     def json(self):
         return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
+    def json_extended(self):
+        return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
 class QuantiteIngredient(models.Model):
     ingredient = models.ForeignKey(
         Ingredient,
         on_delete=models.PROTECT,
-        #blank=True,
-        #null=True,
+        blank=True,
+        null=True,
         # related_name="+",
     )
 
@@ -62,7 +69,11 @@ class QuantiteIngredient(models.Model):
         return f" quantite {self.ingredient} est : {self.quantite}"
 
     def json(self):
-        return {" ingredient ": self.ingredient, "quantite ": self.quantite}
+        return {" ingredient ": self.ingredient.id, "quantite ": self.quantite}
+
+    def json_extended(self):
+        return {" ingredient ": self.ingredient.json_extended, "quantite ": self.quantite}
+
 
     def costs(self, departement):
         cost_qi = (
@@ -81,6 +92,10 @@ class Machine(models.Model):
 
     def json(self):
         return {"machine": self.nom, "prix": self.prix}  # coute {self.prix}
+
+    def json_extended(self):
+        return {"machine": self.nom, "prix": self.prix}
+
 
     def costs(self):
         cost_M = self.prix
@@ -114,14 +129,26 @@ class Action(models.Model):
 
     def json(self):
         T = []
-        for m in self.ingredient.all():
+        for m in self.ingredients.all():
             T.append(m.id)
 
         return {
-            "Action": self.machine,
+            "Action": self.machine.id,
             "avec commande": self.commande,
             "duree": self.duree,
-            "ingredient": T,
+            "ingredients": T,
+        }
+
+    def json_extended(self):
+        T = []
+        for m in self.ingredients.all():
+            T.append(m.json_extended)
+
+        return {
+            "Action": self.machine.json_extended,
+            "avec commande": self.commande,
+            "duree": self.duree,
+            "ingredients": T,
         }
 
 
@@ -132,6 +159,9 @@ class Recette(models.Model):
         return f" Recette : {self.nom}"
 
     def json(self):
+        return {"Recette": self.nom}
+
+    def json_extended(self):
         return {"Recette": self.nom}
 
     action = models.ForeignKey(
