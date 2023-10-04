@@ -51,8 +51,8 @@ class QuantiteIngredient(models.Model):
     ingredient = models.ForeignKey(
         Ingredient,
         on_delete=models.PROTECT,
-        blank=True,
-        null=True,
+        #blank=True,
+        #null=True,
         # related_name="+",
     )
 
@@ -63,8 +63,6 @@ class QuantiteIngredient(models.Model):
 
     def json(self):
         return {" ingredient ": self.ingredient, "quantite ": self.quantite}
-
-
 
     def costs(self, departement):
         cost_qi = (
@@ -117,14 +115,13 @@ class Action(models.Model):
     def json(self):
         T = []
         for m in self.ingredient.all():
-            T .append( m.id)
+            T.append(m.id)
 
         return {
             "Action": self.machine,
             "avec commande": self.commande,
             "duree": self.duree,
-            "ingredient": T
-
+            "ingredient": T,
         }
 
 
@@ -159,11 +156,11 @@ class Usine(models.Model):
     def json(self):
         T = []
         for m in self.machines.all():
-            T .append( m.id)
+            T.append(m.id)
         return {
             "departement": self.departement.numero,
             "taille": self.taille,
-            "machines": T
+            "machines": T,
         }
 
     taille = models.IntegerField()
