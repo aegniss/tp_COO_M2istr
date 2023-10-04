@@ -63,41 +63,7 @@ urlpatterns = [
     path(
         "Departement/api/<int:pk>",
         views.DepartementDetailAPIView.as_view(),
-        name="Departement",
+        name="Departement_api",
     ),
-    path(
-        "Recette/api/<int:pk>",
-        views.RecetteDetailAPIView.as_view(),
-        name="Recette",
-    ),
-    path(
-        "Ingredient/api/<int:pk>",
-        views.IngredientDetailAPIView.as_view(),
-        name="Ingredient",
-    ),
-    path(
-        "Machine/api/<int:pk>",
-        views.MachineDetailAPIView.as_view(),
-        name="Machine",
-    ),
-    path(
-        "QuantiteIngredient/api/<int:pk>",
-        views.QuantiteIngredientDetailAPIView.as_view(),
-        name="QuantiteIngredient",
-    ),
-    path(
-        "Usine/api/<int:pk>",
-        views.UsineDetailAPIView.as_view(),
-        name="Usine",
-    ),
-    path(
-        "Action/api/<int:pk>",
-        views.ActionDetailAPIView.as_view(),
-        name="Action",
-    ),
-    path(
-        "Prix/api/<int:pk>",
-        views.PrixDetailAPIView.as_view(),
-        name="Prix",
-    ),
+
 ]
