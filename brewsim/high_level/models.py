@@ -19,7 +19,7 @@ class Departement(models.Model):
             "Usine": {Departement.Usine_set.get()},
             "prix": [
                 {
-                    "ingredient": Departement.ingredient_set.all(),
+                    "ingredient": Departement.Ingredient_set.all(),
                     "prix": ingredient.prix_set.all(),
                 }
             ],
