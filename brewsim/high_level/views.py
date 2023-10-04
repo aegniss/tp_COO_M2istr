@@ -2,7 +2,7 @@ from json import dumps
 
 from django.http import HttpResponse
 from django.views.generic import DetailView
-from django.views.generic import DetailAPIView
+from django.views.generic import APIView
 
 from .models import (
     Action,
