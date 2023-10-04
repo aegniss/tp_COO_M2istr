@@ -16,12 +16,12 @@ class Departement(models.Model):
         return {
             "numero": self.numero,
             "prix_m2 ": self.prix_m2,
-            "Usine": {Departement.Usine_set.get()},
-            "prix": [
-                {
-                    "ingredient": Departement.Ingredient_set.all(),
-                    "prix": ingredient.prix_set.all(),
-                }
+            "Usine": {self.usine_set.get()},
+            "prix": [p.json_extended() for p in self.prix_set.all()
+                #{
+                #    "ingredient": self.ingredient_set.all(),
+                #    "prix": Ingredient.prix_set.all(),
+                #}
             ],
         }
 
