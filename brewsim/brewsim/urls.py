@@ -17,8 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from high_level import views
-from django.views.generic import DetailView
-from django.views.generic import APIView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -62,45 +60,44 @@ urlpatterns = [
         views.PrixDetailView.as_view(),
         name="Prix",
     ),
-
     path(
         "Departement/api/<int:pk>",
-        views.DepartementAPIView.as_view(),
+        views.DepartementDetailAPIView.as_view(),
         name="Departement",
     ),
     path(
         "Recette/api/<int:pk>",
-        views.RecetteAPIView.as_view(),
+        views.RecetteDetailAPIView.as_view(),
         name="Recette",
     ),
     path(
         "Ingredient/api/<int:pk>",
-        views.IngredientAPIView.as_view(),
+        views.IngredientDetailAPIView.as_view(),
         name="Ingredient",
     ),
     path(
         "Machine/api/<int:pk>",
-        views.MachineAPIView.as_view(),
+        views.MachineDetailAPIView.as_view(),
         name="Machine",
     ),
     path(
         "QuantiteIngredient/api/<int:pk>",
-        views.QuantiteIngredientAPIView.as_view(),
+        views.QuantiteIngredientDetailAPIView.as_view(),
         name="QuantiteIngredient",
     ),
     path(
         "Usine/api/<int:pk>",
-        views.UsineAPIView.as_view(),
+        views.UsineDetailAPIView.as_view(),
         name="Usine",
     ),
     path(
         "Action/api/<int:pk>",
-        views.ActionAPIView.as_view(),
+        views.ActionDetailAPIView.as_view(),
         name="Action",
     ),
     path(
         "Prix/api/<int:pk>",
-        views.PrixAPIView.as_view(),
+        views.PrixDetailAPIView.as_view(),
         name="Prix",
     ),
 ]
