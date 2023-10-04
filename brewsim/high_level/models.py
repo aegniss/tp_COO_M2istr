@@ -9,7 +9,7 @@ class Departement(models.Model):
     def __str__(self):
         return f"{self.numero}"
 
-    def __json__(self):
+    def json(self):
         return {"numero": self.numero, "prix_m2 ": self.prix_m2}
 
 
@@ -19,7 +19,7 @@ class Ingredient(models.Model):
     def __str__(self):
         return f" ingredient : {self.nom}"
 
-    def __json__(self):
+    def json(self):
         return {"ingredient": self.nom}
 
 
@@ -43,7 +43,7 @@ class Prix(models.Model):
     def __str__(self):
         return f" prix {self.ingredient} dep {self.departement} = {self.prix} "
 
-    def __json__(self):
+    def json(self):
         return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
 
@@ -56,13 +56,15 @@ class QuantiteIngredient(models.Model):
         # related_name="+",
     )
 
+    quantite = models.IntegerField()
+
     def __str__(self):
         return f" quantite {self.ingredient} est : {self.quantite}"
 
-    def __json__(self):
+    def json(self):
         return {" ingredient ": self.ingredient, "quantite ": self.quantite}
 
-    quantite = models.IntegerField()
+
 
     def costs(self, departement):
         cost_qi = (
@@ -79,7 +81,7 @@ class Machine(models.Model):
     def __str__(self):
         return f"machine {self.nom}"  # coute {self.prix}
 
-    def __json__(self):
+    def json(self):
         return {"machine": self.nom, "prix": self.prix}  # coute {self.prix}
 
     def costs(self):
@@ -112,12 +114,17 @@ class Action(models.Model):
     def __str__(self):
         return f"Action {self.machine} avec commande {self.commande}"
 
-    def __json__(self):
+    def json(self):
+        T = []
+        for m in self.ingredient.all():
+            T .append( m.id)
+
         return {
             "Action": self.machine,
             "avec commande": self.commande,
             "duree": self.duree,
-            "ingredient": self.ingredients,
+            "ingredient": T
+
         }
 
 
@@ -127,7 +134,7 @@ class Recette(models.Model):
     def __str__(self):
         return f" Recette : {self.nom}"
 
-    def __json__(self):
+    def json(self):
         return {"Recette": self.nom}
 
     action = models.ForeignKey(
@@ -149,11 +156,14 @@ class Usine(models.Model):
     def __str__(self):
         return f"Usine du {self.departement.numero}"
 
-    def __json__(self):
+    def json(self):
+        T = []
+        for m in self.machines.all():
+            T .append( m.id)
         return {
             "departement": self.departement.numero,
             "taille": self.taille,
-            "machines": self.machines,
+            "machines": T
         }
 
     taille = models.IntegerField()
