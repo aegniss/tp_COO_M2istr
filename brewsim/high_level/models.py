@@ -28,6 +28,7 @@ class Ingredient(models.Model):
     def json_extended(self):
         return {"ingredient": self.nom}
 
+
 class Prix(models.Model):
     ingredient = models.ForeignKey(
         Ingredient,
@@ -54,6 +55,7 @@ class Prix(models.Model):
     def json_extended(self):
         return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
+
 class QuantiteIngredient(models.Model):
     ingredient = models.ForeignKey(
         Ingredient,
@@ -72,8 +74,10 @@ class QuantiteIngredient(models.Model):
         return {" ingredient ": self.ingredient.id, "quantite ": self.quantite}
 
     def json_extended(self):
-        return {" ingredient ": self.ingredient.json_extended, "quantite ": self.quantite}
-
+        return {
+            " ingredient ": self.ingredient.json_extended,
+            "quantite ": self.quantite,
+        }
 
     def costs(self, departement):
         cost_qi = (
@@ -95,7 +99,6 @@ class Machine(models.Model):
 
     def json_extended(self):
         return {"machine": self.nom, "prix": self.prix}
-
 
     def costs(self):
         cost_M = self.prix
