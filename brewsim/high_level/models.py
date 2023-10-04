@@ -65,7 +65,11 @@ class Prix(models.Model):
         return {"prix ": self.ingredient, "dep": self.departement, " = ": self.prix}
 
     def json_extended(self):
-        return {"ingredient ": self.ingredient.json_extended, "dep": self.departement, "prix": self.prix}
+        return {
+            "ingredient ": self.ingredient.json_extended,
+            "dep": self.departement,
+            "prix": self.prix,
+        }
 
 
 class QuantiteIngredient(models.Model):
@@ -207,6 +211,19 @@ class Usine(models.Model):
             "taille": self.taille,
             "machines": T,
         }
+
+    def json_extended(self):
+        T = []
+        for m in self.machines.all():
+            T.append(m.json_extended)
+        return {
+            "departement": self.departement.numero,
+            "taille": self.taille,
+            "machines": T,
+
+
+        }
+
 
     taille = models.IntegerField()
 
