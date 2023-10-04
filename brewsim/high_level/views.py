@@ -23,7 +23,7 @@ class DepartementDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class DepartementDetailAPIView(APIView):
+class DepartementAPIView(APIView):
     model = Departement
 
     def render_to_response(self, context, **response_kwargs):
@@ -37,7 +37,7 @@ class IngredientDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class IngredientDetailAPIView(APIView):
+class IngredientAPIView(APIView):
     model = Ingredient
 
     def render_to_response(self, context, **response_kwargs):
@@ -51,7 +51,7 @@ class ActionDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class ActionDetailAPIView(APIView):
+class ActionAPIView(APIView):
     model = Action
 
     def render_to_response(self, context, **response_kwargs):
@@ -65,7 +65,7 @@ class PrixDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class PrixDetailAPIView(APIView):
+class PrixAPIView(APIView):
     model = Prix
 
     def render_to_response(self, context, **response_kwargs):
@@ -79,7 +79,7 @@ class MachineDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class MachineDetailAPIView(APIView):
+class MachineAPIView(APIView):
     model = Machine
 
     def render_to_response(self, context, **response_kwargs):
@@ -100,7 +100,7 @@ class UsineDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class UsineDetailAPIView(APIView):
+class UsineAPIView(APIView):
     model = Usine
 
     def render_to_response(self, context, **response_kwargs):
@@ -114,7 +114,7 @@ class QuantiteIngredientDetailView(DetailView):
         return HttpResponse(dumps(self.object.json()))
 
 
-class QuantiteIngredientDetailAPIView(APIView):
+class QuantiteIngredientAPIView(APIView):
     model = QuantiteIngredient
 
     def render_to_response(self, context, **response_kwargs):
