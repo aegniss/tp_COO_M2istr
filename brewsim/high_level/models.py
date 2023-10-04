@@ -13,7 +13,17 @@ class Departement(models.Model):
         return {"numero": self.numero, "prix_m2 ": self.prix_m2}
 
     def json_extended(self):
-        return {"numero": self.numero, "prix_m2 ": self.prix_m2 , "Usine" : {departement.Usine_set.get()} , "prix" : [{"ingredient" : departement.ingredient_set.all(), "prix" : ingredient.prix_set.all()}]}
+        return {
+            "numero": self.numero,
+            "prix_m2 ": self.prix_m2,
+            "Usine": {Departement.Usine_set.get()},
+            "prix": [
+                {
+                    "ingredient": Departement.ingredient_set.all(),
+                    "prix": ingredient.prix_set.all(),
+                }
+            ],
+        }
 
 
 class Ingredient(models.Model):
