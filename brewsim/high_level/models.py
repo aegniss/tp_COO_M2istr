@@ -220,10 +220,7 @@ class Usine(models.Model):
             "departement": self.departement.numero,
             "taille": self.taille,
             "machines": T,
-
-
         }
-
 
     taille = models.IntegerField()
 
