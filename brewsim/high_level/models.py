@@ -16,12 +16,12 @@ class Departement(models.Model):
         return {
             "numero": self.numero,
             "prix_m2 ": self.prix_m2,
-            "Usine": {self.usine_set.get().json_extended},
+            "Usine": self.usine_set.get().json_extended(),
             "prix": [
                 p.json_extended()
                 for p in self.prix_set.all()
                 # {
-                #    "ingredient": self.ingredient_set.all(),
+                #  http://localhost:8000/Departement/api/1  "ingredient": self.ingredient_set.all(),
                 #    "prix": Ingredient.prix_set.all(),
                 # }
             ],
@@ -66,8 +66,8 @@ class Prix(models.Model):
 
     def json_extended(self):
         return {
-            "ingredient ": self.ingredient.json_extended,
-            "dep": self.departement,
+            "ingredient ": self.ingredient.json_extended(),
+            # "dep": self.departement.json_extended(),
             "prix": self.prix,
         }
 
@@ -91,7 +91,7 @@ class QuantiteIngredient(models.Model):
 
     def json_extended(self):
         return {
-            " ingredient ": self.ingredient.json_extended,
+            " ingredient ": self.ingredient.json_extended(),
             "quantite ": self.quantite,
         }
 
@@ -161,10 +161,10 @@ class Action(models.Model):
     def json_extended(self):
         T = []
         for m in self.ingredients.all():
-            T.append(m.json_extended)
+            T.append(m.json_extended())
 
         return {
-            "Action": self.machine.json_extended,
+            "Action": self.machine.json_extended(),
             "avec commande": self.commande,
             "duree": self.duree,
             "ingredients": T,
@@ -215,9 +215,9 @@ class Usine(models.Model):
     def json_extended(self):
         T = []
         for m in self.machines.all():
-            T.append(m.json_extended)
+            T.append(m.json_extended())
         return {
-            "departement": self.departement.numero,
+            # "departement": self.departement.numero,
             "taille": self.taille,
             "machines": T,
         }

@@ -1,0 +1,1170 @@
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Prix&)’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:90:39: error: base operand of ‘->’ has non-pointer type ‘const Prix’
+   90 |       return out <<" ingredient " << p->ingredient_<< " departement " << p->departement_<< " prix " << p.prix_;}
+      |                                       ^~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:90:75: error: base operand of ‘->’ has non-pointer type ‘const Prix’
+   90 |       return out <<" ingredient " << p->ingredient_<< " departement " << p->departement_<< " prix " << p.prix_;}
+      |                                                                           ^~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: At global scope:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:111:12: error: expected unqualified-id before ‘<<’ token
+  111 | class Usine<< " taille " << u.taille_
+      |            ^~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:166:21: error: ‘Machine’ was not declared in this scope
+  166 |     std::unique_ptr<Machine> machine_;
+      |                     ^~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:166:28: error: template argument 1 is invalid
+  166 |     std::unique_ptr<Machine> machine_;
+      |                            ^
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:166:28: error: template argument 2 is invalid
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Action&)’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:33: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘const std::optional<std::unique_ptr<Action> >’)
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |              ~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~
+      |                  |                   |
+      |                  |                   const std::optional<std::unique_ptr<Action> >
+      |                  std::basic_ostream<char>
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:33: note: candidate: ‘operator<<(int, int)’ (built-in)
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:33: note:   no known conversion for argument 2 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘int’
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:108:36: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:117:32: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:127:30: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘std::ios_base& (*)(std::ios_base&)’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:166:23: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘long int’
+  166 |       operator<<(long __n)
+      |                  ~~~~~^~~
+/usr/include/c++/10/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:170:32: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘long unsigned int’
+  170 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:174:23: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘bool’
+  174 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:92:22: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘short int’
+   92 |     operator<<(short __n)
+      |                ~~~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:181:33: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘short unsigned int’
+  181 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:106:20: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘int’
+  106 |     operator<<(int __n)
+      |                ~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:192:31: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘unsigned int’
+  192 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:201:28: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘long long int’
+  201 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:205:37: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘long long unsigned int’
+  205 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:220:25: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘double’
+  220 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:224:24: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘float’
+  224 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+/usr/include/c++/10/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:232:30: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘long double’
+  232 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:245:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:245:30: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘const void*’
+  245 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:250:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]’
+  250 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:250:18: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘std::nullptr_t’
+  250 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:119:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:120:34: note:   no known conversion for argument 1 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘std::basic_ostream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+  120 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/10/bits/basic_string.h:48,
+                 from /usr/include/c++/10/string:55,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/string_view:619:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)’
+  619 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/string_view:619:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::optional<std::unique_ptr<Action> >’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/string:55,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/basic_string.h:6468:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 6468 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/basic_string.h:6468:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘const std::optional<std::unique_ptr<Action> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/bits/ios_base.h:46,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/system_error:262:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)’
+  262 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+/usr/include/c++/10/system_error:262:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘const std::error_code&’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:506:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)’
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:506:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘std::optional<std::unique_ptr<Action> >’)
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:511:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:511:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘char’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:517:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:517:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘char’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:523:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:523:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘signed char’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:528:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:528:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘unsigned char’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:589:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)’
+  589 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:589:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   mismatched types ‘const _CharT*’ and ‘std::optional<std::unique_ptr<Action> >’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:321:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)’
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘const char*’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:606:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)’
+  606 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:606:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘const char*’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:619:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)’
+  619 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:619:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘const signed char*’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:624:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)’
+  624 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:624:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘const unsigned char*’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:773:5: note: candidate: ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)’
+  773 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:773:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/10/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::optional<std::unique_ptr<Action> >]’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38:   required from here
+/usr/include/c++/10/ostream:773:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from /usr/include/c++/10/memory:84,
+                 from /usr/include/c++/10/thread:44,
+                 from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/bits/shared_ptr.h:69:5: note: candidate: ‘template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)’
+   69 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/shared_ptr.h:69:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘const std::optional<std::unique_ptr<Action> >’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/thread:348:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)’
+  348 |     operator<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+      |     ^~~~~~~~
+/usr/include/c++/10/thread:348:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::thread::id’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:79:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)’
+   79 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:79:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::_Resetiosflags’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:109:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)’
+  109 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:109:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::_Setiosflags’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:143:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)’
+  143 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:143:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::_Setbase’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:178:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)’
+  178 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:178:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::optional<std::unique_ptr<Action> >’ is not derived from ‘std::_Setfill<_CharT>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:208:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)’
+  208 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:208:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::_Setprecision’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:238:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)’
+  238 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:238:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   cannot convert ‘a.Action::action_’ (type ‘const std::optional<std::unique_ptr<Action> >’) to type ‘std::_Setw’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                    ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:311:5: note: candidate: ‘template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)’
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:311:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::optional<std::unique_ptr<Action> >’ is not derived from ‘std::_Put_money<_MoneyT>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:363:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)’
+  363 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:363:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::optional<std::unique_ptr<Action> >’ is not derived from ‘std::_Put_time<_CharT>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:22,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/cstddef:125:5: note: candidate: ‘template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)’
+  125 |     operator<<(byte __b, _IntegerType __shift) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/10/cstddef:125:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:18: note:   cannot convert ‘std::operator<< <std::char_traits<char> >((* & out), ((const char*)" commande "))’ (type ‘std::basic_ostream<char>’) to type ‘std::byte’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |              ~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘const std::optional<std::unique_ptr<Action> >’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘const std::optional<std::unique_ptr<Action> >’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:38: note:   ‘const std::optional<std::unique_ptr<Action> >’ is not derived from ‘const std::valarray<_Tp>’
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                      ^~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:172:26: note: candidate: ‘std::ostream& operator<<(std::ostream&, const Action&)’
+  172 |     friend std::ostream& operator<<(std::ostream& out, const Action& a){
+      |                          ^~~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:172:70: note:   no known conversion for argument 2 from ‘const std::optional<std::unique_ptr<Action> >’ to ‘const Action&’
+  172 |     friend std::ostream& operator<<(std::ostream& out, const Action& a){
+      |                                                        ~~~~~~~~~~~~~~^
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:173:64: error: ‘const class Action’ has no member named ‘duree’; did you mean ‘duree_’?
+  173 |       return out <<" commande " << a.action_ << " duree " << a.duree;}
+      |                                                                ^~~~~
+      |                                                                duree_
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: In constructor ‘Action::Action(int)’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:182:33: error: ‘Machine’ was not declared in this scope; did you mean ‘machine_’?
+  182 |     machine_ =std::make_unique <Machine> (j["machine"]);
+      |                                 ^~~~~~~
+      |                                 machine_
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:182:55: error: no matching function for call to ‘make_unique<<expression error> >(nlohmann::json_abi_v3_11_2::basic_json<>::value_type&)’
+  182 |     machine_ =std::make_unique <Machine> (j["machine"]);
+      |                                                       ^
+In file included from /usr/include/c++/10/memory:83,
+                 from /usr/include/c++/10/thread:44,
+                 from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/bits/unique_ptr.h:961:5: note: candidate: ‘template<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)’
+  961 |     make_unique(_Args&&... __args)
+      |     ^~~~~~~~~~~
+/usr/include/c++/10/bits/unique_ptr.h:961:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:182:55: error: template argument 1 is invalid
+  182 |     machine_ =std::make_unique <Machine> (j["machine"]);
+      |                                                       ^
+In file included from /usr/include/c++/10/memory:83,
+                 from /usr/include/c++/10/thread:44,
+                 from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/bits/unique_ptr.h:967:5: note: candidate: ‘template<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)’
+  967 |     make_unique(size_t __num)
+      |     ^~~~~~~~~~~
+/usr/include/c++/10/bits/unique_ptr.h:967:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:182:55: error: template argument 1 is invalid
+  182 |     machine_ =std::make_unique <Machine> (j["machine"]);
+      |                                                       ^
+In file included from /usr/include/c++/10/memory:83,
+                 from /usr/include/c++/10/thread:44,
+                 from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/bits/unique_ptr.h:973:5: note: candidate: ‘template<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)’ (deleted)
+  973 |     make_unique(_Args&&...) = delete;
+      |     ^~~~~~~~~~~
+/usr/include/c++/10/bits/unique_ptr.h:973:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:182:55: error: template argument 1 is invalid
+  182 |     machine_ =std::make_unique <Machine> (j["machine"]);
+      |                                                       ^
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Recette&)’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:52: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘const std::unique_ptr<Action>’)
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~
+      |                                      |                  |
+      |                                      |                  const std::unique_ptr<Action>
+      |                                      std::basic_ostream<char>
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:52: note: candidate: ‘operator<<(int, int)’ (built-in)
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:52: note:   no known conversion for argument 2 from ‘const std::unique_ptr<Action>’ to ‘int’
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:108:36: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:117:32: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:127:30: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘std::ios_base& (*)(std::ios_base&)’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/usr/include/c++/10/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:166:23: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘long int’
+  166 |       operator<<(long __n)
+      |                  ~~~~~^~~
+/usr/include/c++/10/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:170:32: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘long unsigned int’
+  170 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:174:23: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘bool’
+  174 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:92:22: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘short int’
+   92 |     operator<<(short __n)
+      |                ~~~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:181:33: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘short unsigned int’
+  181 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:106:20: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘int’
+  106 |     operator<<(int __n)
+      |                ~~~~^~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:192:31: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘unsigned int’
+  192 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:201:28: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘long long int’
+  201 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:205:37: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘long long unsigned int’
+  205 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:220:25: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘double’
+  220 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+/usr/include/c++/10/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:224:24: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘float’
+  224 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+/usr/include/c++/10/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:232:30: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘long double’
+  232 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:245:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:245:30: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘const void*’
+  245 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+/usr/include/c++/10/ostream:250:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]’
+  250 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+/usr/include/c++/10/ostream:250:18: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘std::nullptr_t’
+  250 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:119:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:120:34: note:   no known conversion for argument 1 from ‘const std::unique_ptr<Action>’ to ‘std::basic_ostream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+  120 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/10/bits/basic_string.h:48,
+                 from /usr/include/c++/10/string:55,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/string_view:619:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)’
+  619 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/string_view:619:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::unique_ptr<Action>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/string:55,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/basic_string.h:6468:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 6468 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/basic_string.h:6468:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘const std::unique_ptr<Action>’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/bits/ios_base.h:46,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/system_error:262:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)’
+  262 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+/usr/include/c++/10/system_error:262:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘const std::error_code&’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:506:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)’
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:506:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘std::unique_ptr<Action>’)
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:511:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:511:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘char’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:517:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:517:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘char’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:523:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:523:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘signed char’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:528:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:528:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘unsigned char’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:589:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)’
+  589 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:589:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   mismatched types ‘const _CharT*’ and ‘std::unique_ptr<Action>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/ostream:784,
+                 from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/bits/ostream.tcc:321:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)’
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘const char*’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:606:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)’
+  606 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:606:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘const char*’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:619:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)’
+  619 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:619:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘const signed char*’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:624:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)’
+  624 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:624:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘const unsigned char*’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/iostream:39,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:1:
+/usr/include/c++/10/ostream:773:5: note: candidate: ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)’
+  773 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+/usr/include/c++/10/ostream:773:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/10/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::unique_ptr<Action>]’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57:   required from here
+/usr/include/c++/10/ostream:773:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from /usr/include/c++/10/memory:84,
+                 from /usr/include/c++/10/thread:44,
+                 from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/bits/shared_ptr.h:69:5: note: candidate: ‘template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)’
+   69 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+/usr/include/c++/10/bits/shared_ptr.h:69:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘const std::unique_ptr<Action>’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/future:39,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:6,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/thread:348:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)’
+  348 |     operator<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+      |     ^~~~~~~~
+/usr/include/c++/10/thread:348:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::thread::id’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:79:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)’
+   79 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:79:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::_Resetiosflags’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:109:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)’
+  109 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:109:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::_Setiosflags’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:143:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)’
+  143 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:143:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::_Setbase’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:178:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)’
+  178 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:178:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::unique_ptr<Action>’ is not derived from ‘std::_Setfill<_CharT>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:208:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)’
+  208 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:208:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::_Setprecision’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:238:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)’
+  238 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:238:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   cannot convert ‘r.Recette::action_’ (type ‘const std::unique_ptr<Action>’) to type ‘std::_Setw’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                       ~~^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:311:5: note: candidate: ‘template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)’
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:311:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::unique_ptr<Action>’ is not derived from ‘std::_Put_money<_MoneyT>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/bits/fs_path.h:39,
+                 from /usr/include/c++/10/filesystem:45,
+                 from /tmp/build/_deps/cpr-src/include/cpr/filesystem.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/ssl_options.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/response.h:15,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async_wrapper.h:8,
+                 from /tmp/build/_deps/cpr-src/include/cpr/async.h:4,
+                 from /tmp/build/_deps/cpr-src/include/cpr/api.h:10,
+                 from /tmp/build/_deps/cpr-src/include/cpr/cpr.h:4,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:2:
+/usr/include/c++/10/iomanip:363:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)’
+  363 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+/usr/include/c++/10/iomanip:363:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::unique_ptr<Action>’ is not derived from ‘std::_Put_time<_CharT>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:22,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/cstddef:125:5: note: candidate: ‘template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)’
+  125 |     operator<<(byte __b, _IntegerType __shift) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/10/cstddef:125:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:38: note:   cannot convert ‘std::operator<< <std::char_traits<char> >((* & std::operator<< <char, std::char_traits<char>, std::allocator<char> >((* & std::operator<< <std::char_traits<char> >((* & out), ((const char*)" nom "))), r.Recette::nom_)), ((const char*)" Action "))’ (type ‘std::basic_ostream<char>’) to type ‘std::byte’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘const std::unique_ptr<Action>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /usr/include/c++/10/valarray:603,
+                 from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/bits/valarray_after.h:413:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  413 |     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/bits/valarray_after.h:413:5: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘const std::unique_ptr<Action>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+In file included from /tmp/build/_deps/json-src/include/nlohmann/detail/conversions/from_json.hpp:21,
+                 from /tmp/build/_deps/json-src/include/nlohmann/adl_serializer.hpp:14,
+                 from /tmp/build/_deps/json-src/include/nlohmann/json.hpp:35,
+                 from /home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:3:
+/usr/include/c++/10/valarray:1193:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1193 | _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/10/valarray:1193:1: note:   template argument deduction/substitution failed:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:241:57: note:   ‘const std::unique_ptr<Action>’ is not derived from ‘const std::valarray<_Tp>’
+  241 |       return out <<" nom " << r.nom_ << " Action " << r.action_;}
+      |                                                         ^~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:172:26: note: candidate: ‘std::ostream& operator<<(std::ostream&, const Action&)’
+  172 |     friend std::ostream& operator<<(std::ostream& out, const Action& a){
+      |                          ^~~~~~~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:172:70: note:   no known conversion for argument 2 from ‘const std::unique_ptr<Action>’ to ‘const Action&’
+  172 |     friend std::ostream& operator<<(std::ostream& out, const Action& a){
+      |                                                        ~~~~~~~~~~~~~~^
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: At global scope:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:307:14: error: expected unqualified-id before ‘int’
+  307 |   Ingredient(int id)
+      |              ^~~
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:307:14: error: expected ‘)’ before ‘int’
+  307 |   Ingredient(int id)
+      |             ~^~~
+      |              )
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp: In function ‘std::ostream& operator<<(std::ostream&, const QuantiteIngredient&)’:
+/home/msn2738a/Desktop/mkadir/tp_coo_M2istr/brewsim/low_level/low_level.cpp:305:33: error: base operand of ‘->’ has non-pointer type ‘const QuantiteIngredient’
+  305 |       return out <<" nom " << qi->ingredient_ << " quantite " << qi.quantite_;}
+      |                                 ^~
+gmake[2]: *** [CMakeFiles/low_level.dir/build.make:76 : CMakeFiles/low_level.dir/low_level.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:204 : CMakeFiles/low_level.dir/all] Erreur 2
+gmake: *** [Makefile:136 : all] Erreur 2
